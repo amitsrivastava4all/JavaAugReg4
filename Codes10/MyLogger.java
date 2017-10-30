@@ -1,0 +1,12 @@
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
+public class MyLogger {
+	public static String error(Exception e){
+		StringWriter sw = new StringWriter();
+		PrintWriter pw = new PrintWriter(sw);
+		
+		e.printStackTrace(pw);
+		return sw.toString();
+	}
+}
